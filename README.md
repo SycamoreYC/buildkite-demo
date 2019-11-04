@@ -26,3 +26,9 @@ fail -> set volumns to
  volumes:
   - "$(pwd):/app"
 7. trigger to push
+fail -> set first step to 
+ - command: "cd /app && yarn install && yarn test --coverage"
+    label: "Run unit tests"
+     plugins:
+      - docker#v3.3.0:
+          image: "node:8.11.3-alpine"
