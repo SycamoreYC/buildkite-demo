@@ -1,7 +1,7 @@
 steps:
   - command: "yarn install && yarn test --coverage"
     label: "Run unit tests"
-     plugins:
+    plugins:
       - docker#v3.3.0:
           image: "node:8.11.3-alpine"
 
