@@ -7,3 +7,5 @@ have some  permission issues -> delete secrect
 2. push to trigger
 have some  permission issues -> change repository from ssh to https
 3. push to trigger
+ok -> test failed
+add docker plugin in steps
