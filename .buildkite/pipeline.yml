@@ -6,7 +6,7 @@ steps:
     plugins:
       - docker#v3.3.0:
           image: "node:7"
-          workdir: 
+          always-pull: true
 
 
   - command: "./auto/check-code-style"
