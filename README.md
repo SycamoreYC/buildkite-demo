@@ -32,3 +32,12 @@ fail -> set first step to
      plugins:
       - docker#v3.3.0:
           image: "node:8.11.3-alpine"
+8. trigger to push
+fail -> 
+```
+ - command: "yarn install && yarn test --coverage"
+    label: "Run unit tests"
+     plugins:
+      - docker#v3.3.0:
+          image: "node:8.11.3-alpine"
+```

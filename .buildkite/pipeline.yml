@@ -1,18 +1,9 @@
 steps:
-  # - command: "./auto/run-unit-tests"
-  - command: "cd /app && yarn install && yarn test --coverage"
+  - command: "yarn install && yarn test --coverage"
     label: "Run unit tests"
      plugins:
       - docker#v3.3.0:
           image: "node:8.11.3-alpine"
-    # plugins:
-    #   - docker#v3.3.0:
-    #       image: "node:8.11.3-alpine"
-    #       workdir: /app
-    #       environment:
-    #         - "NODE_ENV=test"
-    #       volumes:
-    #         - "$(pwd):/app"
 
 
   - command: "./auto/check-code-style"
