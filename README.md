@@ -41,3 +41,14 @@ fail ->
       - docker#v3.3.0:
           image: "node:8.11.3-alpine"
 ```
+9. trigger to push 
+fail -> 
+```
+ - command:
+    - "yarn install"
+    - "yarn run test --coverage"
+    label: "Run unit tests"
+    plugins:
+      - docker#v3.3.0:
+          image: "node:8.11.3-alpine"
+```
