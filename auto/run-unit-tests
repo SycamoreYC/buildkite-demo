@@ -3,9 +3,10 @@ cd $(dirname $0)/..
 
 CONTAINER_NAME=buildkite-demo-unit-tests
 
-docker run --rm \
-    -v $(pwd):/app \
-    -e NODE_ENV=test \
-    --name $CONTAINER_NAME node:8.11.3-alpine \
-    sh -c "cd /app && yarn install && yarn test --coverage"
+# docker run --rm \
+#     -v $(pwd):/app \
+#     -e NODE_ENV=test \
+#     --name $CONTAINER_NAME node:8.11.3-alpine \
+#     sh -c "cd /app && yarn install && yarn test --coverage"
+cd /app && yarn install && yarn test --coverage
     

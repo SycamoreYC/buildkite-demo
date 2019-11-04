@@ -1,6 +1,13 @@
 steps:
   - command: "./auto/run-unit-tests"
     label: "Run unit tests"
+    plugins:
+      - docker#v3.3.0:
+          image: "node:8.11.3-alpine"
+          environment:
+            - "NODE_ENV=test"
+          volumes: $(pwd):/app
+
 
   - command: "./auto/check-code-style"
     label: "Check code style"

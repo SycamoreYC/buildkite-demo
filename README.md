@@ -12,3 +12,12 @@ add docker plugin in steps
 4. push to trigger
 fail -> delete docker plugin in steps
 5. push to trigger
+fail -> add docker plugin, set firts step to this
+ - command: "./auto/run-unit-tests"
+    label: "Run unit tests"
+    plugins:
+      - docker#v3.3.0:
+          image: "node:8.11.3-alpine"
+          environment:
+            - "NODE_ENV=test"
+          volumes: $(pwd):/app
