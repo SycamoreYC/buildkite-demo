@@ -1,10 +1,6 @@
 steps:
   - command: "./auto/run-unit-tests"
     label: "Run unit tests"
-    plugins:
-      - docker#v3.2.0:
-          image: "node:8"
-          workdir: /app
 
   - command: "./auto/check-code-style"
     label: "Check code style"

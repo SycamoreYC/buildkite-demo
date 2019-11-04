@@ -9,3 +9,6 @@ have some  permission issues -> change repository from ssh to https
 3. push to trigger
 ok -> test failed
 add docker plugin in steps
+4. push to trigger
+fail -> delete docker plugin in steps
+5. push to trigger
