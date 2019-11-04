@@ -6,7 +6,8 @@ steps:
           image: "node:8.11.3-alpine"
           environment:
             - "NODE_ENV=test"
-          volumes: $(pwd):/app
+          volumes:
+            - "$(pwd):/app"
 
 
   - command: "./auto/check-code-style"

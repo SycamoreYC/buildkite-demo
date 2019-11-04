@@ -21,3 +21,8 @@ fail -> add docker plugin, set firts step to this
           environment:
             - "NODE_ENV=test"
           volumes: $(pwd):/app
+6. push to trigger
+fail -> set volumns to 
+ volumes:
+  - "$(pwd):/app"
+7. trigger to push
