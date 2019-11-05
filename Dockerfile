@@ -11,6 +11,7 @@ ENV PATH /app/node_modules/.bin:/root/.yarn/bin:$PATH
 COPY . /app/
 RUN yarn install
 
+VOLUME /var/run/docker.sock:/var/run/docker.sock
 
 
 EXPOSE 3000

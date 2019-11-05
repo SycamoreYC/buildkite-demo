@@ -3,8 +3,6 @@ cd $(dirname $0)/..
 
 CONTAINER_NAME=buildkite-demo-check-code-style
 
-VOLUME: /var/run/docker.sock:/var/run/docker.sock
-
 docker run --rm \
     -v $(pwd):/app \
     -e NODE_ENV=test \

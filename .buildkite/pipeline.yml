@@ -12,8 +12,6 @@ steps:
             - "/var/run/docker.sock:/var/run/docker.sock"
           workdir: "/app"
 
-
-
   - command: "./auto/check-code-style"
     label: "Check code style"
 
