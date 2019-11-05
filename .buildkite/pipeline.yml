@@ -7,6 +7,8 @@ steps:
       - docker#v3.3.0:
           image: "node:7"
           always-pull: true
+          volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock"
 
 
   - command: "./auto/check-code-style"
