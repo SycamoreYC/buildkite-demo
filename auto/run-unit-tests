@@ -6,7 +6,6 @@ CONTAINER_NAME=buildkite-demo-unit-tests
 ls -la $(pwd)
 
 docker run --rm \
-    # -v $(pwd):/app \
     -v /Code/practice/buildkite/buildkite-demo:/app \
     -e NODE_ENV=test \
     --name $CONTAINER_NAME node:8.11.3-alpine \
