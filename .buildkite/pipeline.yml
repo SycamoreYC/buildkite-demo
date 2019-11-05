@@ -1,6 +1,7 @@
 steps:
   - command:
-    - " echo $(pwd)"
+    - "echo 111111: current pwd $(pwd)"
+    - "echo ls"
     - "yarn install"
     - "yarn run test --coverage"
     label: "Run unit tests"
