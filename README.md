@@ -83,3 +83,10 @@ steps:
             - "/var/run/docker.sock:/var/run/docker.sock"
           workdir: "/app"
 ```
+fail -> error Couldn't find a package.json file in "/workdir"
+12. trigger
+change dockerfile
+```
+COPY package.json /app/
+COPY yarn.lock /app/
+```
