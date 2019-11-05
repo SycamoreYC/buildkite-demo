@@ -11,8 +11,8 @@ steps:
           always-pull: true
           volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
+            - "/buildkite/builds:/buildkite/builds "
           workdir: "/app"
-          mount-checkout: false
 
   - command: "./auto/check-code-style"
     label: "Check code style"
