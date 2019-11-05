@@ -1,19 +1,19 @@
 steps:
-  - command:
-    - "echo 111111: current pwd $(pwd)"
-    - "cd .."
-    - "ls"
-    - "yarn install"
-    - "yarn run test --coverage"
-    label: "Run unit tests"
-    plugins:
-      - docker#v3.3.0:
-          image: "node:7"
-          always-pull: true
-          volumes:
-            - "/var/run/docker.sock:/var/run/docker.sock"
-            - "/buildkite/builds:/buildkite/builds "
-          workdir: "/app"
+  # - command:
+  #   - "echo 111111: current pwd $(pwd)"
+  #   - "cd .."
+  #   - "ls"
+  #   - "yarn install"
+  #   - "yarn run test --coverage"
+  #   label: "Run unit tests"
+  #   plugins:
+  #     - docker#v3.3.0:
+  #         image: "node:7"
+  #         always-pull: true
+  #         volumes:
+  #           - "/var/run/docker.sock:/var/run/docker.sock"
+  #           - ""
+  #         workdir: "/app"
 
   - command: "./auto/check-code-style"
     label: "Check code style"
