@@ -90,3 +90,11 @@ change dockerfile
 COPY package.json /app/
 COPY yarn.lock /app/
 ```
+fail -> same erro
+13. trigger
+```
+# COPY package.json /app
+# COPY yarn.lock /app
+COPY . /app
+RUN yarn install
+```
