@@ -137,7 +137,7 @@ fail -> same error
 volumes:
   - "/var/run/docker.sock:/var/run/docker.sock"
   - "./:./"
-    workdir: "/app"
+  workdir: "/app"
 ```
 
 
