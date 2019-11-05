@@ -8,5 +8,5 @@ docker run --rm \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     -e NODE_ENV=test \
     --name $CONTAINER_NAME node:8.11.3-alpine \
-    sh -c "cd /app && yarn install && yarn eslint"
+    sh -c "cd /app && ls && yarn install && yarn eslint"
     
