@@ -7,7 +7,7 @@ ls -la $(pwd)
 
 docker run --rm \
     # -v $(pwd):/app \
-    - /Code/practice/buildkite/buildkite-demo:/app
+    - /Code/practice/buildkite/buildkite-demo:/app \
     -e NODE_ENV=test \
     --name $CONTAINER_NAME node:8.11.3-alpine \
     sh -c "cd /app && ls -al && yarn install && yarn test --coverage"
