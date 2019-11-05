@@ -3,6 +3,8 @@ cd $(dirname $0)/..
 
 CONTAINER_NAME=buildkite-demo-unit-tests
 
+ls -la $(pwd)
+
 docker run --rm \
     -v $(pwd):/app \
     -e NODE_ENV=test \
