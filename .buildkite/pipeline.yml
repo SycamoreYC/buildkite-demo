@@ -9,7 +9,7 @@ steps:
           always-pull: true
           volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
-            - "./:./app"
+            - "./:/app"
           workdir: "/app"
 
 
