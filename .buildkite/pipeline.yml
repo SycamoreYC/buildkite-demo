@@ -9,8 +9,8 @@ steps:
           always-pull: true
           volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
-            - "./:/workdir/"
-          workdir: "/workdir"
+            - "./:./"
+          workdir: "/app"
 
 
   - command: "./auto/check-code-style"

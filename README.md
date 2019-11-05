@@ -131,5 +131,14 @@ volumes:
   - "./:/workdir/"
       workdir: "/workdir"
 ```
+fail -> same error
+17. trigger
+```
+volumes:
+  - "/var/run/docker.sock:/var/run/docker.sock"
+  - "./:./"
+    workdir: "/app"
+```
+
 
 
