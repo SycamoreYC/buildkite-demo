@@ -14,3 +14,5 @@ fail -> delete docker plugin in steps
 5. push to trigger
 6. test
 7. test
+8. test
+
