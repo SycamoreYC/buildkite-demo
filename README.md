@@ -139,6 +139,8 @@ volumes:
   - "./:./"
   workdir: "/app"
 ```
+18. trigger
+volume host code
 
 
 
