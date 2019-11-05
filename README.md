@@ -105,4 +105,21 @@ fail -> same erro
 # COPY yarn.lock /app
 COPY . /app/
 RUN yarn install
+```  
+fail -> same error
+15. trigger
+```
+steps:
+  - command:
+    - "yarn install"
+    - "yarn run test --coverage"
+    label: "Run unit tests"
+    plugins:
+      - docker#v3.3.0:
+          image: "node:7"
+          always-pull: true
+          volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock"
+            - "./:/app/"
+          workdir: "/app"
 ```
