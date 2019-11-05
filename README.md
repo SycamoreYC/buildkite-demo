@@ -98,3 +98,11 @@ fail -> same erro
 COPY . /app
 RUN yarn install
 ```
+fail -> same erro
+14. trigger
+```
+# COPY package.json /app
+# COPY yarn.lock /app
+COPY . /app/
+RUN yarn install
+```

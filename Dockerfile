@@ -8,7 +8,7 @@ ENV PATH /app/node_modules/.bin:/root/.yarn/bin:$PATH
 
 # COPY package.json /app
 # COPY yarn.lock /app
-COPY . /app
+COPY . /app/
 RUN yarn install
 
 
