@@ -123,3 +123,13 @@ steps:
             - "./:/app/"
           workdir: "/app"
 ```
+fail -> Error response from daemon: Duplicate mount point: /app.
+16. 
+```
+volumes:
+  - "/var/run/docker.sock:/var/run/docker.sock"
+  - "./:/workdir/"
+      workdir: "/workdir"
+```
+
+
