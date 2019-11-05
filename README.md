@@ -61,3 +61,16 @@ use docker-compose plugin
       - docker-compose#v3.1.0:
           run: app
 ```
+failed
+
+11. trigger
+add docker-compose with 
+```
+version: '2'
+services:
+  app:
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
+```
