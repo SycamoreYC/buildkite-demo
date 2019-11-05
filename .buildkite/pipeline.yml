@@ -1,6 +1,7 @@
 steps:
   - command:
     - "echo 111111: current pwd $(pwd)"
+    - "cd .."
     - "ls"
     - "yarn install"
     - "yarn run test --coverage"
