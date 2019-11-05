@@ -1,12 +1,8 @@
 steps:
-  - command:
-    - "yarn install"
-    - "yarn run test --coverage"
-    label: "Run unit tests"
+  - command: echo "!!!!!"
     plugins:
-      - docker#v3.3.0:
-          image: "node:7"
-          always-pull: true
+      - docker-compose#v3.1.0:
+          run: app
 
 
   - command: "./auto/check-code-style"

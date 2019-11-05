@@ -52,3 +52,12 @@ fail ->
       - docker#v3.3.0:
           image: "node:8.11.3-alpine"
 ```
+
+10. trigger
+use docker-compose plugin
+```
+ - command: echo "!!!!!"
+    plugins:
+      - docker-compose#v3.1.0:
+          run: app
+```
