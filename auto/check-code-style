@@ -5,7 +5,7 @@ CONTAINER_NAME=buildkite-demo-check-code-style
 
 docker run --rm \
     -v $(pwd):/app \
-    -v /var/run/docker.sock:/var/run/docker.sock
+    -v /var/run/docker.sock:/var/run/docker.sock \
     -e NODE_ENV=test \
     --name $CONTAINER_NAME node:8.11.3-alpine \
     sh -c "cd /app && yarn install && yarn eslint"
