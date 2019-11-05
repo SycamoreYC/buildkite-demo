@@ -1,6 +1,5 @@
 steps:
   - command:
-    - "cd /app"
     - "yarn install"
     - "yarn run test --coverage"
     label: "Run unit tests"
