@@ -1,7 +1,8 @@
 steps:
   - command:
-    - "echo :smile:"
-    - "echo :snowman:"
+    - "cd /app"
+    - "yarn install"
+    - "yarn run test --coverage"
     label: "Run unit tests"
     plugins:
       - docker#v3.3.0:
@@ -9,6 +10,8 @@ steps:
           always-pull: true
           volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
+          workdir: "/app"
+
 
 
   - command: "./auto/check-code-style"
