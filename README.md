@@ -66,3 +66,20 @@ steps:
           volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
 ```
+some success :smile:
+but stil fail because: error Couldn't find a package.json file in "/workdir"
+11. trigger
+```
+steps:
+  - command:
+    - "yarn install"
+    - "yarn run test --coverage"
+    label: "Run unit tests"
+    plugins:
+      - docker#v3.3.0:
+          image: "node:7"
+          always-pull: true
+          volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock"
+          workdir: "/app"
+```
