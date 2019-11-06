@@ -4,7 +4,7 @@ cd $(dirname $0)/..
 CONTAINER_NAME=buildkite-demo-unit-tests
 
 ls -la $(pwd)
-buildkite-agent meta-data keys
+buildkite-agent meta-data keys --job $BUILDKITE_JOB_ID
 echo :v: $(pwd)
 # docker run --rm \
 #     -v /Code/practice/buildkite/buildkite-demo/builds/$BUILDKITE_AGENT_NAME/$BUILDKITE_ORGANIZATION_SLUG/$BUILDKITE_PIPELINE_SLUG:/app \
