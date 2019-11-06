@@ -8,4 +8,5 @@ docker run --rm \
     -e NODE_ENV=test \
     --name $CONTAINER_NAME node:8.11.3-alpine \
     sh -c "cd /app && yarn install && yarn eslint"
-    
+
+buildkite-agent annotate --style success  
