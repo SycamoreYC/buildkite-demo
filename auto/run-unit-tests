@@ -5,9 +5,10 @@ CONTAINER_NAME=buildkite-demo-unit-tests
 
 ls -la $(pwd)
 
-docker run --rm \
-    -v /Code/practice/buildkite/buildkite-demo/builds/$BUILDKITE_AGENT_NAME/$BUILDKITE_ORGANIZATION_SLUG/$BUILDKITE_PIPELINE_SLUG:/app \
-    -e NODE_ENV=test \
-    --name $CONTAINER_NAME node:8.11.3-alpine \
-    sh -c "cd /app && ls -al && yarn install && yarn test --coverage"
+echo :v: $(pwd)
+# docker run --rm \
+#     -v /Code/practice/buildkite/buildkite-demo/builds/$BUILDKITE_AGENT_NAME/$BUILDKITE_ORGANIZATION_SLUG/$BUILDKITE_PIPELINE_SLUG:/app \
+#     -e NODE_ENV=test \
+#     --name $CONTAINER_NAME node:8.11.3-alpine \
+#     sh -c "cd /app && ls -al && yarn install && yarn test --coverage"
     
