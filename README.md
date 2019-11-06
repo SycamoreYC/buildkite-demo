@@ -12,9 +12,4 @@ add docker plugin in steps
 4. push to trigger
 fail -> delete docker plugin in steps
 5. push to trigger
-6. test
-7. test
-8. test
-9. test
-10. test
 
