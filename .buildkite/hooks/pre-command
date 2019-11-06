@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo '--- :sparkles: Changing to the CI directory'
-echo $(buildkite-agent meta-data keys)
+echo $BUILDKITE_JOB_ID
+buildkite-agent meta-data keys -job $BUILDKITE_JOB_ID
+buildkite-agent annotate 
 echo '222222'
 echo 'ss'
 echo '111'
