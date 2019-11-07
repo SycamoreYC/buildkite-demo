@@ -9,6 +9,7 @@ docker run --rm \
     --name $CONTAINER_NAME node:8.11.3-alpine \
     sh -c "cd /app && ls -al && yarn install && yarn test --coverage"
 
+buildkite-agent meta-data set "foo" "bar"
 buildkite-agent meta-data keys --job $BUILDKITE_JOB_ID
 
     
