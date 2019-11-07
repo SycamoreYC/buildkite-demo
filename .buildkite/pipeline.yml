@@ -1,6 +1,6 @@
 steps:
-  - command: "./auto/run-unit-tests"
-    label: "Run unit tests"
+  # - command: "./auto/run-unit-tests"
+  #   label: "Run unit tests"
 
   - command: "./auto/check-code-style"
     label: "Check code style"
